@@ -325,7 +325,7 @@ typedef NS_ENUM(NSUInteger, BMARangeSliderHandler) {
 }
 
 - (void)executeBlock:(void (^)(void))block animated:(BOOL)animated {
-    if (animated) {
+    if (animated && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         [UIView animateWithDuration:[self animationDuration]
                               delay:0.0
                             options:UIViewAnimationOptionBeginFromCurrentState

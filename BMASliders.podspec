@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/badoo/BMASliders"
   s.license      = { :type => "MIT"}
   s.author       = { "Diego Sanchez" => "diego.sanchez@corp.badoo.com" }
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/badoo/BMASliders.git", :tag => s.version.to_s }
   s.source_files = "Component/Classes/**/*"
   s.public_header_files = "Component/Classes/*.h"
