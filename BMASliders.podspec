@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.1"
   s.summary      = "Configurable range and simple sliders, IBInspectable and IBDesignable compatible"
   s.description  = <<-DESC
-                   BMASliders` is a set of reusable sliders. It includes two kind of sliders, one with customizable ranges -`BMARangeSlider`- and a simpler one -`BMASlider`- along with its labeled counterparts -`BMALabeledRangeSlider` and `BMALabeledSlider` 				
+                   BMASliders` is a set of reusable sliders. It includes two kind of sliders, one with customizable ranges -`BMARangeSlider`- and a simpler one -`BMASlider`- along with its labeled counterparts -`BMALabeledRangeSlider` and `BMALabeledSlider`
                    DESC
   s.homepage     = "http://github.com/badoo/BMASliders"
   s.license      = { :type => "MIT"}
@@ -15,5 +15,10 @@ Pod::Spec.new do |s|
   s.public_header_files = "Component/Classes/*.h"
   s.resources    = "Component/Resources/*"
   s.requires_arc = true
+
+  s.subspec 'RangeSliderOnly' do |ss|
+    ss.source_files = 'Component/Classes/BMARangeSlider.{h,m}', 'Component/Classes/BMASlider{Styling,LiveRenderingStyle}.{h,m}'
+    ss.public_header_files = 'Component/Classes/BMARangeSlider.h', 'Component/Classes/BMASlider{Styling,LiveRenderingStyle}.h'
+  end
 
 end
